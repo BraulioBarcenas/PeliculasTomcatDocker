@@ -7,12 +7,10 @@ import javax.servlet.http.*;
 
 public class HelloServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    // private static String JDBC_URL = "jdbc:mysql://mysql:3306/peliculas";
-    // private static String JDBC_USER = "user";
-    // private static String JDBC_PASS = "password";
-    private static String JDBC_URL = "jdbc:mysql://127.0.0.1:3306/peliculas";
-    private static String JDBC_USER = "root";
-    private static String JDBC_PASS = "";
+    private static String JDBC_URL = "jdbc:mysql://mysql:3306/peliculas";
+    private static String JDBC_USER = "user";
+    private static String JDBC_PASS = "password";
+
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) 
     throws ServletException, IOException {
