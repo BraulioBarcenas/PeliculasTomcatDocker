@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+    version="3.0">
+    <servlet>
+        <servlet-name>HelloServlet</servlet-name>
+        <servlet-class>com.peliculas.HelloServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloServlet</servlet-name>
+        <url-pattern>/tomcat_server</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>NewMovie</servlet-name>
+        <servlet-class>com.peliculas.NewMovie</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NewMovie</servlet-name>
+        <url-pattern>/new_movie_form</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>UpdateMovie</servlet-name>
+        <servlet-class>com.peliculas.UpdateMovie</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateMovie</servlet-name>
+        <url-pattern>/update_movie</url-pattern>
+    </servlet-mapping>
+        <servlet>
+        <servlet-name>DeleteMovie</servlet-name>
+        <servlet-class>com.peliculas.DeleteMovie</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteMovie</servlet-name>
+        <url-pattern>/delete_movie</url-pattern>
+    </servlet-mapping>
+</web-app>

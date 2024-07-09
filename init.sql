@@ -1,0 +1,10 @@
+CREATE DATABASE IF NOT EXISTS peliculas;
+
+USE peliculas;
+
+CREATE TABLE IF NOT EXISTS peliculas (
+    id_pelicula INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL
+);
+
+

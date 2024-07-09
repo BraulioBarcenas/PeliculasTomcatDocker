@@ -1,0 +1,21 @@
+rmdir build/ /s
+rm TomcatServer.war
+javac -cp "lib/servlet-api.jar" -d build src/com/peliculas/HelloServlet.java
+javac -cp "lib/servlet-api.jar" -d build src/com/peliculas/NewMovie.java
+javac -cp "lib/servlet-api.jar" -d build src/com/peliculas/UpdateMovie.java
+javac -cp "lib/servlet-api.jar" -d build src/com/peliculas/DeleteMovie.java
+cp -r web/* build/
+mkdir -p build/WEB-INF/classes
+cp -r build/com build/WEB-INF/classes/
+jar cvf TomcatServer.war -C build .
+copy TomcatServer.war apache-tomcat-9.0.89\webapps
+
+DESDE LA CARPETA DE TOMCAT /BIN
+.\startup.bat
+
+GENERAR DOCKER SIN DOCKER COMPOSE
+docker build -t tomcat_example .
+docker run -d -p 8080:8080 tomcat_example
+
+
+docker-compose up --build
